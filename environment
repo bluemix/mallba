@@ -1,0 +1,18 @@
+# Mallba Configuration.
+whoami=`whoami`
+MALLBA_DIR=/home/${whoami}/Mallba
+MALLBA_INC=${MALLBA_DIR}/inc
+MALLBA_LIB=${MALLBA_DIR}/lib
+MALLBA_SRC=${MALLBA_DIR}/src
+MALLBA_REP=${MALLBA_DIR}/rep
+#MPI_BIN=/home/${whoami}/mpich-1.2.7p1/bin
+MPI_BIN=/usr/bin
+#MPI_BIN=mpich_path
+
+CXX=$(MPI_BIN)/mpiCC
+RUN=$(MPI_BIN)/mpirun
+#other options: -g for debugging and -pg for profiling
+#CPPFLAGS=-I$(MALLBA_INC) -Wno-deprecated -O3
+CPPFLAGS=-I$(MALLBA_INC) -O3
+LDFLAGS=-L$(MALLBA_LIB)
+LOADLIBES=-lmallba  -lm

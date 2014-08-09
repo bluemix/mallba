@@ -1,0 +1,9 @@
+Requires:
+- MPICH to be installed on your system (in debian-like operating systems (e.g., Ubuntu) open the terminal and type: sudo apt-get install mpich).
+
+Installation:
+
+- Open the terminal in the current directory and type: make
+
+
+
